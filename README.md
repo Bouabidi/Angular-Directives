@@ -8,29 +8,29 @@ Angular directives are categorized into three categories.
 2. Structural Directives
 3. Components
 
-* Attribute Directives
+## Attribute Directives
 Attribute Directives are responsible for manipulating the appearance and behavior of DOM elements. We can use attribute directives to change the style of DOM elements. These directives are also used to hide or show particular DOM elements conditionally. Angular provides many built-in Attribute Directives like NgStyle, NgClass, etc. We can also create our own custom Attribute Directives for our desired functionality.
 
-** Structural Directives
+## Structural Directives
 Structural Directives are responsible for changing the structure of the DOM. They work by adding or removing the elements from the DOM, unlike Attribute Directives which just change the element’s appearance and behavior.
 
 The three most popular built-in Structural Directives Angular provides are NgIf, NgFor, and NgSwitch.
 
-** Using Angular Built-In Directives
+## Using Angular Built-In Directives
 
-*** NgStyle 
+### NgStyle 
 Is an Attribute directive used to change the styling of any DOM element on the basis of some condition.
  ```javascript
 <p [ngStyle]="{'background': isBlue ? 'blue' : 'red'}"> I am an Attribute Directive</p>
 ```
 In the above code snippet, we are adding a blue background if the value of isBlue variable is true. If the value of isBlue variable is false, then the background of the above element will be red.
 
-*** NgIf 
+### NgIf 
 Is a structural directive used to add elements into the DOM according to some condition.
 <p *ngIf="show">I am a Structural Directive</p>
 In the above code snippet, the whole paragraph will remain in the DOM if the value of show variable is true, else it will kick off from the DOM.
 
-*** NgFor
+### NgFor
 The *ngFor directive is used to repeat a portion of HTML template once per each item from an iterable list (Collection).
 We have an array of objects here that contains people's names and their ages.
 
@@ -43,7 +43,7 @@ Now, we will use *ngFor to display these names in the interface.
   </li>
 </ul>
 ```
-** Custom Attribute Directive
+## Custom Attribute Directive
 Creating a custom directive is just like creating an Angular component. To create a custom directive we have to replace @Component decorator with @Directive decorator.
 
 The steps to create custom attribute directive.
@@ -71,7 +71,7 @@ export class CPDefaultThemeDirective implements AfterViewInit {
 ```
 AfterViewInit is the lifecycle hook that is called after a component view has been fully initialized. To use AfterViewInit, our class will implement it and override its method ngAfterViewInit().
 
-*** Directive using @Input()
+### Directive using @Input()
 To accept input within directive we need to declare a property decorated with @Input(). We must use property name same as selector name. If we want to use different property name from selector name then use alias with @Input().
 
  ```javascript
@@ -123,7 +123,7 @@ export class CPCustomThemeDirective implements AfterViewInit {
 to use our custom directive:
 <div cpCustomTheme tcolor="blue" tsize="30px"> cpCustomTheme Directive Demo with Custom Settings</div> 
 
-*** Directive using @HostListener()
+### Directive using @HostListener()
 
 If we want to change element appearance in DOM on any event then we need to listen event in our custom directive. To listen event we will use Angular @HostListener() decorator in our custom directive. The event name will be assigned to @HostListener() decorator.
 
@@ -179,7 +179,7 @@ to use our custom directive:
 <p [dynamicColOnEvent]="myColor" defaultValue="blue"> dynamicColOnEvent Directive Demo</p> 
 
 
-** Structural Directive for IF Condition
+## Structural Directive for IF Condition
 We will create a structural directive that will add a layout in DOM for a true condition otherwise it will delete it from DOM.
 
  ```javascript
