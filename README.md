@@ -8,7 +8,7 @@ Angular directives are categorized into three categories.
 2. Structural Directives
 3. Components
 
-** Attribute Directives
+* Attribute Directives
 Attribute Directives are responsible for manipulating the appearance and behavior of DOM elements. We can use attribute directives to change the style of DOM elements. These directives are also used to hide or show particular DOM elements conditionally. Angular provides many built-in Attribute Directives like NgStyle, NgClass, etc. We can also create our own custom Attribute Directives for our desired functionality.
 
 ** Structural Directives
